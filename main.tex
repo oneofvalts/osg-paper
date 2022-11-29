@@ -1,0 +1,84 @@
+\makeatletter
+\disable@package@load{mparhack}{}
+\makeatother
+\documentclass[a4paper, openright, oneside]{memoir}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{euler}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{physics}
+
+\usepackage[french]{babel}
+
+\setulmarginsandblock{1.5cm}{1.5cm}{*}
+\setlrmarginsandblock{1.5cm}{1.5cm}{*}
+\checkandfixthelayout{}
+
+\usepackage{tgpagella}
+\usepackage[T1]{fontenc}
+\let\oldnormalfont\normalfont{}
+\def\normalfont{\oldnormalfont\mdseries}
+
+\usepackage[none]{hyphenat}
+\usepackage[
+unicode,
+pdftex,
+pdfpagelabels,
+bookmarks,
+hyperindex,
+hyperfigures,
+colorlinks]{hyperref}
+
+\usepackage[stable, symbol]{footmisc}
+\usepackage{enumitem}
+\usepackage{lipsum}
+
+\renewcommand{\cftdot}{}
+
+\nouppercaseheads{}
+\setsecnumdepth{chapter}
+\addto\captionsfrench{\renewcommand{\bookname}{livre}}
+\addto\captionsfrench{\renewcommand{\partname}{partie}}
+\addto\captionsfrench{\renewcommand{\chaptername}{chapitre}}
+\addto\captionsfrench{\renewcommand{\contentsname}{table des matières}}
+
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother
+
+\newenvironment{solution}
+{\begin{proof}[solution]}
+  {\end{proof}}
+
+\addto\captionsfrench{\renewcommand\proofname{démonstration}}
+
+\settowidth{\versewidth}{param bahçe uydular ordularla geçti}
+
+\newtheorem{theorem}{théorème}
+\theoremstyle{definition}
+\newtheorem{definition}{définition}
+\theoremstyle{remark}
+\newtheorem{exercise}{exercice}
+\newtheorem*{exercise*}{exercice}
+\newtheorem{example}{exemple}
+\newtheorem*{notation}{notation}
+\newtheorem*{question}{question}
+
+\usepackage{tikz}
+
+\newcommand\wbox[2][]{\tikz[overlay]\node[fill=blue!20,inner sep=2pt, anchor=text, rectangle, rounded corners=1mm,#1] {#2};\phantom{#2}}
+
+\title{An Order Search Game}
+\date{September 17, 2022}
+\author{Oğuzhan Kaymak\\
+\textit{typeset by} Abdullah Uyu}
+
+\begin{document}
+\maketitle
+\subsection{An Informal Description}
+Get a regular deck and make its front face to yourself.
+\end{document}
